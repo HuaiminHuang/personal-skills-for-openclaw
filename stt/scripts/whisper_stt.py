@@ -3,21 +3,41 @@
 STT script for OpenClaw - Whisper small FP16 on CUDA
 Usage: whisper_stt.py <audio_file> [language]
 
-Requires: /home/h2mzzz/.openclaw/venvs/stt/bin/python
+Config: reads ../config.env for model path and CUDA settings.
 """
 
 import os
 import sys
+import subprocess
 
-# CUDA environment - required for GPU inference
-os.environ["LD_LIBRARY_PATH"] = "/usr/local/lib/ollama/cuda_v12"
 
-# Model path
-MODEL_PATH = "/home/h2mzzz/.cache/huggingface/hub/models--Systran--faster-whisper-small"
+def _load_config():
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    config_path = os.path.normpath(os.path.join(script_dir, "..", "config.env"))
+    if not os.path.exists(config_path):
+        return {}
+    result = subprocess.run(
+        ["bash", "-c", f"source '{config_path}' && env"],
+        capture_output=True, text=True,
+    )
+    env = {}
+    if result.returncode == 0:
+        for line in result.stdout.splitlines():
+            if "=" in line:
+                k, v = line.split("=", 1)
+                env[k] = v
+    return env
+
+
+_cfg = _load_config()
+
+MODEL_PATH = _cfg.get(
+    "WHISPER_MODEL_PATH",
+    "/home/h2mzzz/.cache/huggingface/hub/models--Systran--faster-whisper-small",
+)
 
 
 def transcribe(audio_path: str, language: str = "zh") -> str:
-    """Transcribe audio file using faster-whisper small on CUDA."""
     from faster_whisper import WhisperModel
 
     model = WhisperModel(

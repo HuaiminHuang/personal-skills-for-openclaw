@@ -29,13 +29,14 @@
 ## 调用示例
 
 ```bash
-# 基本调用
-/home/h2mzzz/.openclaw/skills/stt/scripts/whisper_stt.py <音频文件路径>
+# 通过 config.env 加载环境
+source /home/h2mzzz/.openclaw/skills/stt/config.env
+$VENV_PYTHON /home/h2mzzz/.openclaw/skills/stt/scripts/whisper_stt.py <音频文件路径>
 
 # 指定语言
-/home/h2mzzz/.openclaw/skills/stt/scripts/whisper_stt.py <音频文件路径> en
+$VENV_PYTHON /home/h2mzzz/.openclaw/skills/stt/scripts/whisper_stt.py <音频文件路径> en
 
-# 在 Python 中调用
+# 在 Python 中直接调用
 from faster_whisper import WhisperModel
 model = WhisperModel(
     '/home/h2mzzz/.cache/huggingface/hub/models--Systran--faster-whisper-small',

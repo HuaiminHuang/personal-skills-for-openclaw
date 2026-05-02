@@ -44,3 +44,9 @@ sk-*
 *.tmp
 *.bak
 *.pid
+
+
+# special
+*.png
+*.json
+*.jsonl

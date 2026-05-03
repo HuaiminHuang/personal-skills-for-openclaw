@@ -21,7 +21,7 @@
 
 | 项目 | 路径 |
 |------|------|
-| 主脚本 | `~/.openclaw/skills/tts/scripts/tts.py` |
+| 主脚本 | `~/.openclaw/skills/ailuo-cat-tts/scripts/tts.py` |
 | MiniMax 工具包 | `~/.openclaw/skills/minimax-multimodal-toolkit/scripts/tts/generate_voice.sh` |
 
 ## Tmp 目录
@@ -36,10 +36,10 @@
 
 ```bash
 # 默认（呆猫克隆音色）
-python ~/.openclaw/skills/tts/scripts/tts.py --text "你好喵，我是呆猫"
+python ~/.openclaw/skills/ailuo-cat-tts/scripts/tts.py --text "你好喵，我是呆猫"
 
 # 指定音色
-python ~/.openclaw/skills/tts/scripts/tts.py \
+python ~/.openclaw/skills/ailuo-cat-tts/scripts/tts.py \
   --text "今天天气真好" \
   --voice-id female-shaonv \
   --output /tmp/my_audio.mp3

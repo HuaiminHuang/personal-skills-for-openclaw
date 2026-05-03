@@ -1,5 +1,5 @@
 ---
-name: tts
+name: ailuo-cat-tts
 description: Use when the user asks for 文字转语音, TTS, 生成语音, or expresses companionship intent such as 陪我聊聊, 陪我说话, 安慰, or sharing emotions that call for a voice response.
 ---
 
@@ -28,10 +28,10 @@ description: Use when the user asks for 文字转语音, TTS, 生成语音, or e
 
 ```bash
 # 基础调用
-/usr/bin/python3 ~/.openclaw/skills/tts/scripts/tts.py --text "要合成的文本"
+/usr/bin/python3 ~/.openclaw/skills/ailuo-cat-tts/scripts/tts.py --text "要合成的文本"
 
 # 指定情感和语速
-/usr/bin/python3 ~/.openclaw/skills/tts/scripts/tts.py --text "你好喵" --emotion happy --speed 1.1
+/usr/bin/python3 ~/.openclaw/skills/ailuo-cat-tts/scripts/tts.py --text "你好喵" --emotion happy --speed 1.1
 ```
 
 ## Core Flow

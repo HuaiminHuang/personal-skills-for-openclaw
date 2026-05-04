@@ -63,7 +63,7 @@ flowchart TD
 | `--pitch` | `0` | 音调 | -1 ~ 1（整数） |
 | `--volume` | `1.0` | 音量 | 0.0 ~ 2.0 |
 | `--emotion` | `fluent` | 情感风格 | 见情感列表 |
-| `--output` | 自动生成 | 输出路径 | `~/.openclaw/openclaw-data/tts/audio/tts_*.mp3` |
+| `--output` | 自动生成 | 输出路径 | `~/.openclaw/media/qqbot/voice/tts_*.mp3` |
 | `--max-chars` | 500 | 每段最大字符数 | 正整数 |
 
 ## Emotion Options

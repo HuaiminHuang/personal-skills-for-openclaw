@@ -41,7 +41,7 @@ for _profile in ("/home/h2mzzz/.profile", "/home/h2mzzz/.bashrc"):
         break
 
 # Tmp output directory (1GB threshold, auto-cleanup)
-TMP_DIR = "/home/h2mzzz/.openclaw/openclaw-data/tts/audio"
+TMP_DIR = "/home/h2mzzz/.openclaw/media/qqbot/voice"
 MAX_TMP_SIZE_BYTES = 1 * 1024 * 1024 * 1024  # 1GB
 
 # Default voice: cloned ailuo_cat

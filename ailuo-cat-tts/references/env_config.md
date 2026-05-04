@@ -28,7 +28,7 @@
 
 | 项目 | 值 |
 |------|-----|
-| 目录路径 | `~/.openclaw/openclaw-data/tts/audio/` |
+| 目录路径 | `~/.openclaw/media/qqbot/voice/` |
 | 阈值 | 1GB |
 | 清理策略 | 超过阈值时按时间倒序删除旧文件 |
 

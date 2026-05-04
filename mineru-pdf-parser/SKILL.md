@@ -48,7 +48,7 @@ mineru-clean.sh ./output/paper_name/ --no-json
 Script: `scripts/mineru-parse.sh` — parse PDFs via `mineru`.
 Script: `scripts/mineru-clean.sh` — clean intermediate files post-parse.
 
-Requires `mineru` in PATH (`pip install 'mineru[pipeline]'` in conda env).
+Requires `mineru` in PATH (`pip install 'mineru[pipeline]'` in openclaw venv).
 
 ### mineru-parse.sh Options
 
@@ -125,7 +125,7 @@ output_dir/paper_name/auto/
 
 | Symptom | Cause | Fix |
 |---------|-------|-----|
-| `mineru: command not found` | Conda env not activated | `conda activate minerU` |
+| `mineru: command not found` | venv not activated | `source ~/.openclaw/venvs/mineru-pdf-parser/bin/activate` |
 | `ConnectionResetError` on HF | Proxy / GFW blocking | `HF_ENDPOINT=https://hf-mirror.com` |
 | Model download hangs | Network issue | Pre-download with `mineru-models-download`, use `--models-dir` |
 | VRAM OOM | Too many pages | Reduce `MINERU_PROCESSING_WINDOW_SIZE` or `-s 0 -e 10` |

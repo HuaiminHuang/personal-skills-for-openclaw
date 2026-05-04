@@ -150,14 +150,11 @@ if ! command -v mineru &>/dev/null; then
     echo -e "${RED}Error: 'mineru' command not found${NC}"
     echo ""
     echo "Activate existing environment:"
-    echo "  conda activate minerU"
+    echo "  source ~/.openclaw/venvs/mineru-pdf-parser/bin/activate"
     echo ""
     echo "Or install fresh:"
-    echo "  conda create -n mineru python=3.10 -y"
-    echo "  conda activate mineru"
-    echo "  pip install uv"
-    echo "  uv pip install --index-url https://download.pytorch.org/whl/cu124 torch torchvision torchaudio"
-    echo "  uv pip install 'mineru[pipeline]'"
+    echo "  uv venv ~/.openclaw/venvs/mineru-pdf-parser --python 3.11"
+    echo "  uv pip install --python ~/.openclaw/venvs/mineru-pdf-parser/bin/python 'mineru[pipeline]'"
     exit 1
 fi
 

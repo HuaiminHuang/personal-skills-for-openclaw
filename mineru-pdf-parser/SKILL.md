@@ -131,6 +131,12 @@ output_dir/paper_name/auto/
 | VRAM OOM | Too many pages | Reduce `MINERU_PROCESSING_WINDOW_SIZE` or `-s 0 -e 10` |
 | `mineru-clean.sh` finds nothing | Wrong directory level | Target paper dir (has subdirs like auto/), not method dir |
 
+## Conventions
+
+- **PDF 下载目录**: 所有下载的 PDF 文件统一保存到 `/home/h2mzzz/.openclaw/openclaw-data/pdf/`
+- **解析输出目录**: 所有解析结果保存到 `/home/h2mzzz/.openclaw/openclaw-data/pdf/`，使用 `-o /home/h2mzzz/.openclaw/openclaw-data/pdf/` 覆盖默认路径
+- 完整流程：下载 PDF → 保存到 `/home/h2mzzz/.openclaw/openclaw-data/pdf/` → 在同目录下解析 → 清理中间文件
+
 ## Notes
 
 - First run downloads ~2-5GB models to `~/.cache/mineru/` (subsequent runs offline)
